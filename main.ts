@@ -3,230 +3,32 @@ namespace SpriteKind {
     export const FakeMonsters = SpriteKind.create()
     export const NormalThing = SpriteKind.create()
 }
-
-//Images that ninjas can use in makeDualityMonster
-let monster1 = img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . f f f f f f f . . . . . . 
-            . . . f f f f f f f f . . . . . 
-            . . . f f 2 f f 2 f f . . . . . 
-            . . f f 2 2 f f 2 2 f . . . . . 
-            . . f f f f f f f f f . . . . . 
-            . . . . f f f f f f . . . . . . 
-            . . . . . f f f f f . . . . . . 
-            . . . . f f f f f f f . . . . . 
-            . . . f f f f f f f f . . . . . 
-            . . . f . f f f f . f . . . . . 
-            . f f f . f f f f . f f . . . . 
-            . f . . . f f f f . . f f . . . 
-            . . . . . f f f f . . . . . . . 
-            . . . . f f . . f f . . . . . . 
-            `
-let monster2 = img`
-            . . . . . . . . . . . . . . . . 
-            . . d d d . . . d d . . d . . . 
-            . . . . d . . d d . . . d . . . 
-            . . . . d d . d . . d d . . . . 
-            d d d . . d d d . d . . . . d d 
-            d d d d 8 d d 8 d d . d d d d . 
-            . . . d d d d d d d d d . . . . 
-            . d d d 8 d 8 d d d d . . . . . 
-            d d . d d d d d d 8 d . . . . . 
-            d d . . f f f d d d d . . . . . 
-            . d . . . e e e e . . . . . . . 
-            . . . . . . e e e . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            `
-let monster3 = img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . 2 2 2 2 . . . . . 
-            . . . . . . . 2 c c 2 2 2 . . . 
-            . . . . . . . 2 d c c c 2 . . . 
-            . . 2 2 2 2 2 2 d d d c 2 . . . 
-            . . 2 2 c d d d d d d c 2 . . . 
-            . . 2 c c d d d d d d c 2 . . . 
-            . . 2 2 2 2 2 2 2 2 2 2 2 . . . 
-            . . . . f 5 5 f f 5 5 f . . . . 
-            . . . . f 5 f f f f 5 f . . . . 
-            . . . . f f f a a f f f . . . . 
-            . . . . . . a a a a . . . . . . 
-            . . . . . . a a a a . . . . . . 
-            . . . . . a a a a a a . . . . . 
-            . . . . a a . a a . a a . . . . 
-            . . . . a . . a . . . a . . . . 
-            `
-let monster4 = img`
-    . . . . . . . . . . . . . . . .
-    . . . . . . f f f f . . . . . .
-    . . . f f f f f f f f f f . . .
-    . . . f f f e e e e f f f . . .
-    . . . f f e e e e e e f f . . .
-    . . . f e 2 2 e e 2 2 e f . . .
-    . . . f e e 2 e e 2 e e f . . .
-    . f f f e e e e e e e e f f f .
-    . f f f e e e 2 2 e e e f f f .
-    . f f f e e e e e e e e f f f .
-    . . . . . . . f f . . . . . . .
-    . . . . . f f f f f f . . . . .
-    . . . . . f . f f . f . . . . .
-    . . . . . f . f f . f . . . . .
-    . . . . . f . f f . f . . . . .
-    . . . . . . . f f . . . . . . .
-`
-let normalThing1 = img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . f f f f f f f . . . . 
-            . . . 2 2 2 2 2 2 2 2 2 2 2 . . 
-            . . f f f f f f f f f f f f f . 
-            . . 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
-            . . f f . f f f f f f f . f f . 
-            . . 2 2 . 2 2 2 2 2 2 2 . 2 2 . 
-            . . f f . f f f f f f f . f f . 
-            . . . . . 2 2 2 2 2 2 2 . . . . 
-            . . . . . f f f f f f f . . . . 
-            . . . . . 2 2 2 2 2 2 2 . . . . 
-            . . . . . . . . . . . . . . . . 
-            `
-let normalThing2 = img`
-            . . . . . . . . . . . . . . . . 
-            . d d d d d d d d d d d d . . . 
-            . . d d d d d d d d d d . . . . 
-            . . . d d d d d d d d . . . . . 
-            . . . . d d d d d d . . . . . . 
-            . . . . . d d d d . . . . . . . 
-            . . . . . . d d . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            . . . . . . e e . . . . . . . . 
-            `
-let normalThing3 = img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . 2 2 2 2 . . . . . . 
-            . . . . . 2 2 2 2 2 2 . . . . . 
-            . . . . . 2 2 2 2 2 2 . . . . . 
-            . . . . . 2 2 2 2 2 2 . . . . . 
-            . . . . . 2 2 2 2 2 2 . . . . . 
-            . . . . 4 4 4 4 4 4 4 4 . . . . 
-            . . . . 4 4 4 4 4 4 4 4 . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `
-let normalThing4 = img`
-                . . . . . . . . . . . . . . . .
-                . . . . . . 5 5 5 5 . . . . . .
-                . . . 5 5 5 5 5 5 5 5 5 5 . . .
-                . . . 5 5 5 d d d d 5 5 5 . . .
-                . . . 5 5 d d d d d d 5 5 . . .
-                . . . 5 d 9 d d d d 9 d 5 . . .
-                . . . 5 d d d d d d d d 5 . . .
-                . 5 5 5 d d 3 3 3 3 d d 5 5 5 .
-                . 5 5 5 d d d 3 3 d d d 5 5 5 .
-                . 5 5 5 d d d d d d d d 5 5 5 .
-                . . . . . . . c c . . . . . . .
-                . . . . . c c c c c c . . . . .
-                . . . . . c . c c . c . . . . .
-                . . . . . c . c c . c . . . . .
-                . . . . . c . c c . c . . . . .
-                . . . . . . . c c . . . . . . .
-            `
-//makeDualityMonster: add your code below
-
-
-//createAllMonsters: add your code below
-
-
-//turnOnTheDark: add your code below
-
-
-//turnOffTheDark: ninja must complete
-function turnOffTheDark () {
-    //add code here
-    
-    redoTile(myTiles.tile1)
-    redoTile(myTiles.tile2)
-    redoTile(myTiles.tile3)
-    redoTile(myTiles.tile4)
-    redoTile(myTiles.tile5)
-    redoTile(myTiles.tile6)
-    redoTile(myTiles.tile7)
-    darkIsOff = true
+function turnOnTheDark () {
+    setTilemap()
+    for (let value of sprites.allOfKind(SpriteKind.NormalThing)) {
+        value.setImage(sprites.readDataSprite(value, "night").image)
+        value.follow(vivian, 15)
+        value.setKind(SpriteKind.Monster)
+    }
+    darkIsOff = false
 }
-
+function createAllMonsters () {
+    for (let index = 0; index < 4; index++) {
+        makeDualityMonster(monster1, normalThing1)
+        makeDualityMonster(monster2, normalThing2)
+        makeDualityMonster(monster3, normalThing3)
+        makeDualityMonster(monster4, normalThing4)
+    }
+}
 // setTilemap -- do not delete.
 function setTilemap () {
     tiles.loadMap(tiles.createMap(tilemap`level`))
     tiles.setTilemap(tilemap`level_0`)
 }
-// redoTile -- do not delete.
-function redoTile (tileImage: Image) {
-    copiedTile = tileImage.clone()
-    copiedTile.replace(12, 13)
-    copiedTile.replace(11, 1)
-    copiedTile.replace(14, 4)
-    tiles.coverAllTiles(tileImage, copiedTile)
-}
-// Vivian touches a monster
-
-//flashlight on
-controller.A.onEvent(ControllerButtonEvent.Pressed, function() {
-    if (batteryLife.value > 0) {
-        vivian.setImage(img`
-            . f f f f f f f f f f f f . . .
-            f f f . f f f f f d d f f f . .
-            f f . f f f f f d d d d f f . .
-            f f . f f f f d d d d d d d f .
-            . . . f f f d d d f d d d f f 5
-            . . . f f d d d d d d d d d 5 .
-            . . . . f d d d d d d d d 5 f .
-            . . . . f 2 2 2 2 2 2 2 5 2 f .
-            . . . . f 2 2 2 2 2 2 2 5 2 f .
-            . . . . f 2 d d 2 2 2 5 2 2 f .
-            . . . . f 2 d d 2 2 5 2 2 2 f .
-            . . . . f 2 2 d 8 4 2 2 2 2 f .
-            . . . . . f 8 d 8 4 5 5 5 5 5 5
-            . . . . . f f f 8 4 f f f f f .
-            . . . . . . f f f f 5 5 f . . .
-            . . . . . . f d d d f f 5 5 d .
-        `)
-      //ninja add code here
-      
-    }
-})
-//Update battery lifespan
-game.onUpdate(function () {
-   
-})
-
-// Battery goes to zero
-
-
-// flashlight off (A button released)
-
-
-//Do not delete, win condition for vivian.
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location) {
+// Do not delete, win condition for vivian.
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile7`, function (sprite, location) {
     turnOffTheDark()
-    tiles.placeOnRandomTile(sprite, myTiles.tile3)
+    tiles.placeOnRandomTile(sprite, assets.tile`tile3`)
     sprite.setImage(img`
         ....................
         ...................d
@@ -249,21 +51,253 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location
     safeAndSound = true
     controller.moveSprite(sprite, 0, 0)
 })
-
-//Vivian wins, do not delete
+// Vivian touches a monster
+// flashlight on
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    // ninja add code here
+    if (batteryLife.value > 0) {
+        turnOffTheDark()
+        vivian.setImage(img`
+            . f f f f f f f f f f f f . . . 
+            f f f . f f f f f d d f f f . . 
+            f f . f f f f f d d d d f f . . 
+            f f . f f f f d d d d d d d f . 
+            . . . f f f d d d f d d d f f 5 
+            . . . f f d d d d d d d d d 5 . 
+            . . . . f d d d d d d d d 5 f . 
+            . . . . f 2 2 2 2 2 2 2 5 2 f . 
+            . . . . f 2 2 2 2 2 2 2 5 2 f . 
+            . . . . f 2 d d 2 2 2 5 2 2 f . 
+            . . . . f 2 d d 2 2 5 2 2 2 f . 
+            . . . . f 2 2 d 8 4 2 2 2 2 f . 
+            . . . . . f 8 d 8 4 5 5 5 5 5 5 
+            . . . . . f f f 8 4 f f f f f . 
+            . . . . . . f f f f 5 5 f . . . 
+            . . . . . . f d d d f f 5 5 d . 
+            `)
+    }
+})
+// redoTile -- do not delete.
+function redoTile (tileImage: Image) {
+    copiedTile = tileImage.clone()
+    copiedTile.replace(12, 13)
+    copiedTile.replace(11, 1)
+    copiedTile.replace(14, 4)
+    tiles.coverAllTiles(tileImage, copiedTile)
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Monster, function (sprite, otherSprite) {
+    game.reset()
+})
+statusbars.onZero(StatusBarKind.Health, function (status) {
+    turnOnTheDark()
+})
+controller.A.onEvent(ControllerButtonEvent.Released, function () {
+    turnOnTheDark()
+})
+// turnOffTheDark: ninja must complete
+function turnOffTheDark () {
+    // add code here
+    redoTile(assets.tile`tile1`)
+    redoTile(assets.tile`tile2`)
+    redoTile(assets.tile`tile3`)
+    redoTile(assets.tile`tile4`)
+    redoTile(assets.tile`tile5`)
+    redoTile(assets.tile`tile6`)
+    redoTile(assets.tile`tile7`)
+    darkIsOff = true
+}
+// On game start
+function makeDualityMonster (night: Image, day: Image) {
+    monster = sprites.create(night, SpriteKind.Monster)
+    daytimeMonster = sprites.create(night, SpriteKind.FakeMonsters)
+    nighttimeMonster = sprites.create(day, SpriteKind.FakeMonsters)
+    daytimeMonster.setFlag(SpriteFlag.Invisible, true)
+    daytimeMonster.setFlag(SpriteFlag.Ghost, true)
+    nighttimeMonster.setFlag(SpriteFlag.Invisible, true)
+    nighttimeMonster.setFlag(SpriteFlag.Ghost, true)
+    sprites.setDataSprite(monster, "day", daytimeMonster)
+    sprites.setDataSprite(monster, "night", nighttimeMonster)
+    monster.setPosition(randint(50, 650), randint(0, 100))
+    monster.follow(vivian, 15)
+}
+// Vivian wins, do not delete
 sprites.onDestroyed(SpriteKind.Player, function (sprite) {
     game.over(true)
 })
-
-
-//On game start
+/**
+ * turnOnTheDark: add your code below
+ */
+/**
+ * makeDualityMonster: add your code below
+ * 
+ * createAllMonsters: add your code below
+ */
+/**
+ * Battery goes to zero
+ * 
+ * flashlight off (A button released)
+ */
 let nighttimeMonster: Sprite = null
 let daytimeMonster: Sprite = null
 let monster: Sprite = null
-let safeAndSound = false
 let copiedTile: Image = null
+let safeAndSound = false
 let darkIsOff = false
+let batteryLife: StatusBarSprite = null
 let vivian: Sprite = null
+let normalThing4: Image = null
+let normalThing3: Image = null
+let normalThing2: Image = null
+let normalThing1: Image = null
+let monster4: Image = null
+let monster3: Image = null
+let monster2: Image = null
+let monster1: Image = null
+// Images that ninjas can use in makeDualityMonster
+monster1 = img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . f f f f f f f . . . . . . 
+    . . . f f f f f f f f . . . . . 
+    . . . f f 2 f f 2 f f . . . . . 
+    . . f f 2 2 f f 2 2 f . . . . . 
+    . . f f f f f f f f f . . . . . 
+    . . . . f f f f f f . . . . . . 
+    . . . . . f f f f f . . . . . . 
+    . . . . f f f f f f f . . . . . 
+    . . . f f f f f f f f . . . . . 
+    . . . f . f f f f . f . . . . . 
+    . f f f . f f f f . f f . . . . 
+    . f . . . f f f f . . f f . . . 
+    . . . . . f f f f . . . . . . . 
+    . . . . f f . . f f . . . . . . 
+    `
+monster2 = img`
+    . . . . . . . . . . . . . . . . 
+    . . d d d . . . d d . . d . . . 
+    . . . . d . . d d . . . d . . . 
+    . . . . d d . d . . d d . . . . 
+    d d d . . d d d . d . . . . d d 
+    d d d d 8 d d 8 d d . d d d d . 
+    . . . d d d d d d d d d . . . . 
+    . d d d 8 d 8 d d d d . . . . . 
+    d d . d d d d d d 8 d . . . . . 
+    d d . . f f f d d d d . . . . . 
+    . d . . . e e e e . . . . . . . 
+    . . . . . . e e e . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    `
+monster3 = img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . 2 2 2 2 . . . . . 
+    . . . . . . . 2 c c 2 2 2 . . . 
+    . . . . . . . 2 d c c c 2 . . . 
+    . . 2 2 2 2 2 2 d d d c 2 . . . 
+    . . 2 2 c d d d d d d c 2 . . . 
+    . . 2 c c d d d d d d c 2 . . . 
+    . . 2 2 2 2 2 2 2 2 2 2 2 . . . 
+    . . . . f 5 5 f f 5 5 f . . . . 
+    . . . . f 5 f f f f 5 f . . . . 
+    . . . . f f f a a f f f . . . . 
+    . . . . . . a a a a . . . . . . 
+    . . . . . . a a a a . . . . . . 
+    . . . . . a a a a a a . . . . . 
+    . . . . a a . a a . a a . . . . 
+    . . . . a . . a . . . a . . . . 
+    `
+monster4 = img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . f f f f . . . . . . 
+    . . . f f f f f f f f f f . . . 
+    . . . f f f e e e e f f f . . . 
+    . . . f f e e e e e e f f . . . 
+    . . . f e 2 2 e e 2 2 e f . . . 
+    . . . f e e 2 e e 2 e e f . . . 
+    . f f f e e e e e e e e f f f . 
+    . f f f e e e 2 2 e e e f f f . 
+    . f f f e e e e e e e e f f f . 
+    . . . . . . . f f . . . . . . . 
+    . . . . . f f f f f f . . . . . 
+    . . . . . f . f f . f . . . . . 
+    . . . . . f . f f . f . . . . . 
+    . . . . . f . f f . f . . . . . 
+    . . . . . . . f f . . . . . . . 
+    `
+normalThing1 = img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . f f f f f f f . . . . 
+    . . . 2 2 2 2 2 2 2 2 2 2 2 . . 
+    . . f f f f f f f f f f f f f . 
+    . . 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
+    . . f f . f f f f f f f . f f . 
+    . . 2 2 . 2 2 2 2 2 2 2 . 2 2 . 
+    . . f f . f f f f f f f . f f . 
+    . . . . . 2 2 2 2 2 2 2 . . . . 
+    . . . . . f f f f f f f . . . . 
+    . . . . . 2 2 2 2 2 2 2 . . . . 
+    . . . . . . . . . . . . . . . . 
+    `
+normalThing2 = img`
+    . . . . . . . . . . . . . . . . 
+    . d d d d d d d d d d d d . . . 
+    . . d d d d d d d d d d . . . . 
+    . . . d d d d d d d d . . . . . 
+    . . . . d d d d d d . . . . . . 
+    . . . . . d d d d . . . . . . . 
+    . . . . . . d d . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    . . . . . . e e . . . . . . . . 
+    `
+normalThing3 = img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . 2 2 2 2 . . . . . . 
+    . . . . . 2 2 2 2 2 2 . . . . . 
+    . . . . . 2 2 2 2 2 2 . . . . . 
+    . . . . . 2 2 2 2 2 2 . . . . . 
+    . . . . . 2 2 2 2 2 2 . . . . . 
+    . . . . 4 4 4 4 4 4 4 4 . . . . 
+    . . . . 4 4 4 4 4 4 4 4 . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `
+normalThing4 = img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . 5 5 5 5 . . . . . . 
+    . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+    . . . 5 5 5 d d d d 5 5 5 . . . 
+    . . . 5 5 d d d d d d 5 5 . . . 
+    . . . 5 d 9 d d d d 9 d 5 . . . 
+    . . . 5 d d d d d d d d 5 . . . 
+    . 5 5 5 d d 3 3 3 3 d d 5 5 5 . 
+    . 5 5 5 d d d 3 3 d d d 5 5 5 . 
+    . 5 5 5 d d d d d d d d 5 5 5 . 
+    . . . . . . . c c . . . . . . . 
+    . . . . . c c c c c c . . . . . 
+    . . . . . c . c c . c . . . . . 
+    . . . . . c . c c . c . . . . . 
+    . . . . . c . c c . c . . . . . 
+    . . . . . . . c c . . . . . . . 
+    `
 scene.setBackgroundImage(img`
     8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
     8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
@@ -406,10 +440,15 @@ vivian = sprites.create(img`
     . . . . . . f b b b f f b b b . 
     `, SpriteKind.Player)
 controller.moveSprite(vivian, 80, 60)
-tiles.placeOnRandomTile(vivian, myTiles.tile3)
+tiles.placeOnRandomTile(vivian, assets.tile`tile3`)
 scene.cameraFollowSprite(vivian)
-//must create this function before code can run.
-createAllMonsters()
-let batteryLife = statusbars.create(20, 4, StatusBarKind.Health)
+// must create this function before code can run.
+// createAllMonsters()
+batteryLife = statusbars.create(20, 4, StatusBarKind.Health)
 batteryLife.attachToSprite(vivian)
 batteryLife.setColor(6, 15)
+createAllMonsters()
+// Update battery lifespan
+game.onUpdate(function () {
+	
+})

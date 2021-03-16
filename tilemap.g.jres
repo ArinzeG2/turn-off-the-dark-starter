@@ -52,7 +52,8 @@
             "myTiles.transparency16",
             "myTiles.tile1",
             "myTiles.tile2"
-        ]
+        ],
+        "displayName": "level"
     },
     "level_0": {
         "id": "level_0",
@@ -67,7 +68,8 @@
             "myTiles.tile3",
             "myTiles.tile6",
             "myTiles.tile7"
-        ]
+        ],
+        "displayName": "level_0"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
