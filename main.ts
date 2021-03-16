@@ -6,7 +6,7 @@ namespace SpriteKind {
 function turnOnTheDark () {
     setTilemap()
     for (let value of sprites.allOfKind(SpriteKind.NormalThing)) {
-        value.setImage(sprites.readDataSprite(value, "night").image)
+        value.setImage(sprites.readDataSprite(value, "day").image)
         value.follow(vivian, 15)
         value.setKind(SpriteKind.Monster)
     }
@@ -96,6 +96,11 @@ controller.A.onEvent(ControllerButtonEvent.Released, function () {
 })
 // turnOffTheDark: ninja must complete
 function turnOffTheDark () {
+    for (let value of sprites.allOfKind(SpriteKind.Monster)) {
+        value.setImage(sprites.readDataSprite(value, "night").image)
+        value.follow(vivian, 0)
+        value.setKind(SpriteKind.NormalThing)
+    }
     // add code here
     redoTile(assets.tile`tile1`)
     redoTile(assets.tile`tile2`)
@@ -141,8 +146,8 @@ let nighttimeMonster: Sprite = null
 let daytimeMonster: Sprite = null
 let monster: Sprite = null
 let copiedTile: Image = null
-let safeAndSound = false
 let darkIsOff = false
+let safeAndSound = false
 let batteryLife: StatusBarSprite = null
 let vivian: Sprite = null
 let normalThing4: Image = null
@@ -449,6 +454,9 @@ batteryLife.attachToSprite(vivian)
 batteryLife.setColor(6, 15)
 createAllMonsters()
 // Update battery lifespan
+safeAndSound = false
 game.onUpdate(function () {
-	
+    if (darkIsOff && !(safeAndSound)) {
+        batteryLife.value += -1
+    }
 })
